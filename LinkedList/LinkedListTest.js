@@ -29,3 +29,10 @@ linkedList.addBeforeValue(38, 24);
 linkedList.addBeforeValue(37, 2);
 linkedList.addBeforeValue(32, 30);
 new LinkedListPrint().printList(linkedList.getHead());
+
+
+linkedList.addAfterValue(40, 33);
+linkedList.addAfterValue(44, 24);
+linkedList.addAfterValue(41, 49);
+linkedList.addAfterValue(46, 3);
+new LinkedListPrint().printList(linkedList.getHead());

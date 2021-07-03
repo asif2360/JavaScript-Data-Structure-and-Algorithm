@@ -108,8 +108,44 @@ export class LinkedListInsert{
         this.size++;
     }
 
+    //add the given value after the value 
+    addAfterValue(element, value){
+        let newNode = new LinkedListNode(element);
+        if(this.head.data == value){
+            newNode.next = this.head.next;
+            this.head.next = newNode;
+            this.size++;
+            return;
+        }
+
+        let currentNode = this.head;
+        while(currentNode && currentNode.data != value){
+            currentNode = currentNode.next;
+        }
+
+        if(currentNode == null){
+            console.log("Insertion Failed! Value is not present in the list");
+            return;
+        }
+
+        if(currentNode.next == null){
+            this.addAtEnd(element);
+            return;
+        }
+
+        newNode.next = currentNode.next;
+        currentNode.next = newNode;
+        this.size++;
+
+    }
+
     //return the head of the linked list 
     getHead(){
         return this.head;
+    }
+
+    //return the size of the linked list 
+    getSize(){
+        return this.size;
     }
 }
