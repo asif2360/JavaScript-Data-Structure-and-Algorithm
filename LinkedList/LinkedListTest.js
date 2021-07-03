@@ -51,7 +51,7 @@ linkedListdel.deleteFromIndex(10);
 linkedListdel.deleteFromIndex(12);
 linkedListdel.deleteFromIndex(3);
 new LinkedListPrint().printList(linkedListdel.getHead());
-linkedListdel.deleteAValue(90);
+linkedListdel.deleteAValue(190);
 linkedListdel.deleteAValue(14);
 linkedListdel.deleteAValue(4);
 linkedListdel.deleteAValue(3);
