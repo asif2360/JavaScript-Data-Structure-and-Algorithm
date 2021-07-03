@@ -1,0 +1,30 @@
+//Insertion in Linked List 
+//O(n)
+a. addAtEnd();
+b. addAtBeg();
+c. addAtIndex();
+d. addAfterValue();
+
+// Deletion in Linked List
+// O(n)
+a. deleteFromStart()
+b. deleteFromEnd()
+c. deleteFromIndex()
+d. deleteAValue()
+
+
+// Sorting in Linked List 
+a. Bubble Sort
+b. Insertion Sort 
+c. Selection Sort 
+d. Merge Sort 
+e. Quick Sort 
+f. Count Sort 
+
+
+// Traversal in Linked List 
+
+
+
+
+//Singly Linked List Interview Question
