@@ -1,5 +1,6 @@
 import { LinkedListInsert } from "./LinkedListInsert.js";
 import { LinkedListPrint } from "./LinkedListPrint.js";
+import {LinkedListDelete} from "./LinkedListDelete.js"
 
 
 //create the object of Linked list insert class 
@@ -36,3 +37,23 @@ linkedList.addAfterValue(44, 24);
 linkedList.addAfterValue(41, 49);
 linkedList.addAfterValue(46, 3);
 new LinkedListPrint().printList(linkedList.getHead());
+
+let linkedListdel = new LinkedListDelete(linkedList.getHead(), linkedList.getSize());
+
+linkedListdel.deleteFrombeg();
+linkedListdel.deleteFrombeg();
+linkedListdel.deleteFromEnd();
+linkedListdel.deleteFromEnd();
+linkedListdel.deleteFromEnd();
+new LinkedListPrint().printList(linkedListdel.getHead());
+linkedListdel.deleteFromIndex(0);
+linkedListdel.deleteFromIndex(10);
+linkedListdel.deleteFromIndex(12);
+linkedListdel.deleteFromIndex(3);
+new LinkedListPrint().printList(linkedListdel.getHead());
+linkedListdel.deleteAValue(90);
+linkedListdel.deleteAValue(14);
+linkedListdel.deleteAValue(4);
+linkedListdel.deleteAValue(3);
+new LinkedListPrint().printList(linkedListdel.getHead());
+
