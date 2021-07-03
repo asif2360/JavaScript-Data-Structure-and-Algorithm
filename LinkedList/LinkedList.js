@@ -2,21 +2,20 @@ import { LinkedListNode  } from "./LinkedListNode.js";
 
 class LinkedList{
 
-    //intialize the LinkedList with head equal to null
+    //intialize the LinkedList data members inside the contructor
     constructor(head = null)
     {
         this.head = head;
         this.size = 0;
     }
 
-    //add an element at the end of the LinkedList
+    //Add an element at the end of the LinkedList
     addAtEnd(element)
     {
         let newNode = new LinkedListNode(element);
         if(this.head == null)
         {
-            this.head = newNode;
-            newNode.next = null;
+            this.head = newNode; 
             this.size++;
             return;
         }
@@ -35,8 +34,7 @@ class LinkedList{
         let newNode = new LinkedListNode(element);
         if(this.head == null)
         {
-            this.head = newNode;
-            newNode.next = null;
+            this.head = newNode; 
             this.size++;
             return;
         }
@@ -51,6 +49,11 @@ class LinkedList{
         if(index > this.size || index < 0)
         {
             console.log("can Not insert the element at index out of range");
+            return;
+        }
+
+        if(index == this.size){
+            this.addAtEnd(element);
             return;
         }
         let currentNode = this.head
@@ -186,9 +189,9 @@ linkList.addAtEnd(5);
 linkList.addAtEnd(15);
 linkList.addAtEnd(25);
 linkList.addAtEnd(35);
-linkList.addAtEnd(5);
+linkList.addAtEnd(53);
 linkList.addAtBeg(4); 
-linkList.addAfterIndex(17, 1);  
+linkList.addAfterIndex(17, 6);  
 linkList.addAfterValue(23, 17);
 console.log("Size", linkList.getSize()); 
 linkList.print();
