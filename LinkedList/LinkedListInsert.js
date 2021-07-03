@@ -80,7 +80,7 @@ export class LinkedListInsert{
         }
         let currentNode = this.head;
 
-        while(currentNode && currentNode.next && currentNode.data != value){
+        while(currentNode && currentNode.next && currentNode.next.data != value){
             currentNode = currentNode.next;
         }
 
@@ -89,17 +89,20 @@ export class LinkedListInsert{
             console.log("Insertion Failed! value is not found in the list");
             return;
         }
+        let newNode = new LinkedListNode(element);
 
         //check if the value present at the end of the list 
-        if(currentNode.next == null  && currentNode.data == value){
-            this.addAtEnd(element);
+        if(currentNode.next != null  && currentNode.next.data == value){
+            newNode.next = currentNode.next;
+            currentNode.next = newNode;
+            this.size++;
             return;
         } else {
             console.log("Insertion failed! Given value is not found in list");
             return;
         }
 
-        let newNode = new LinkedListNode(element);
+       
         newNode.next = currentNode.next;
         currentNode.next = newNode;
         this.size++;
