@@ -1,7 +1,7 @@
 import { LinkedListInsert } from "./LinkedListInsert.js";
 import { LinkedListPrint } from "./LinkedListPrint.js";
 import {LinkedListDelete} from "./LinkedListDelete.js"
-import { bubbleSort} from "./LinkedListBubleSort.js"
+import { bubbleSort} from "./LinkedListBubbleSort.js"
 
 
 //create the object of Linked list insert class 
