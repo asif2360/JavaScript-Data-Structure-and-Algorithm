@@ -1,6 +1,7 @@
 import { LinkedListInsert } from "./LinkedListInsert.js";
 import { LinkedListPrint } from "./LinkedListPrint.js";
 import {LinkedListDelete} from "./LinkedListDelete.js"
+import { bubbleSort} from "./LinkedListBubleSort.js"
 
 
 //create the object of Linked list insert class 
@@ -56,4 +57,10 @@ linkedListdel.deleteAValue(14);
 linkedListdel.deleteAValue(4);
 linkedListdel.deleteAValue(3);
 new LinkedListPrint().printList(linkedListdel.getHead());
+
+//bubble sort 
+console.log("Bubblle Sort");
+let head = bubbleSort(linkedList.getHead(), linkedList.getSize());
+
+new LinkedListPrint().printList(head);
 
