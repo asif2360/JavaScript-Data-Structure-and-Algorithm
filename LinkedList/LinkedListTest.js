@@ -4,15 +4,19 @@ import {LinkedListDelete} from "./LinkedListDelete.js"
 import { bSR, bubbleSort} from "./LinkedListBubbleSort.js"
 
 
+
 //create the object of Linked list insert class 
 let linkedList = new LinkedListInsert();
 
 //add items to linked list 
-linkedList.addAtEnd(12);
+linkedList.addAtEnd(1);
+linkedList.addAtEnd(2);
 linkedList.addAtEnd(3);
-linkedList.addAtEnd(14);
+linkedList.addAtEnd(4);
 linkedList.addAtEnd(5);
-new LinkedListPrint().printList(linkedList.getHead());
+linkedList.addAtEnd(6);
+let head = swapPairs(linkedList.getHead())
+new LinkedListPrint().printList(head);
 
 linkedList.addAtBeg(7);
 linkedList.addAtBeg(12);
